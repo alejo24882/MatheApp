@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Inicio</title>
+</head>
+<body>
+    <div class="contenedor">
+    <div class="header">
+        Bienvenido
+    </div>
+    <div class="ContenedorPantallas">
+        <!-- Inicio pagina Inicial -->
+        <div class="paginaInicial">
+        <div class="NavBienv">
+             <div class="diseñoBtns" id="btnHome">
+               <img src="../img/icons/casa.png" alt="" width="70px" height="70px" class="" style="opacity: 0.6;
+               margin-bottom:10px;">
+               <div>Home</div>
+             </div>
+             <div class="diseñoBtns" id="btnEjercicios" onclick="abrirEjercicios()">
+                <img src="../img/icons/gorro-de-graduacion.png" alt="" width="75px" height="78px" class="" style="opacity: 0.6;
+                margin-bottom:5px;">
+                <div>Ejercicios</div>
+
+             </div>
+             <div class="diseñoBtns" id="btnConfiguracion" onclick="abrirConfig()">
+                <img src="../img/icons/ajustes.png" alt="" width="70px" height="70px" class="" style="opacity: 0.6;
+                margin-bottom:10px;">
+                <div>Configuración</div>
+
+             </div>
+             <div class="diseñoBtns" id="btnAbout" onclick="abrirAbout()">
+                <img src="../img/icons/informacion.png" alt="" width="70px" height="70px" class="" style="opacity: 0.7;
+                margin-bottom:10px;">
+                <div>About</div>
+             </div>
+        </div>
+         <div class='contBtnLogOut'>
+                <input type="button" value="Logout" id="btnLoginout" class="btnLoginout" onclick="LogOut()">
+        </div>
+    </div>
+        <!-- Fin pagina inicial -->
+
+
+
+    <div id="popUp">
+        <button>PopUp</button>
+    </div>
+
+
+
+
+
+    </div>
+
+    <div class="navAbajo">
+
+        <div class="diseñoBtnsAbajo" id="menuAbajo" onclick="abrirPaginaInicial()">
+            <img src="../img/icons/casa.png" alt=""  class="" style="opacity: 0.6;">
+            <div>Home</div>
+          </div>
+          <div class="diseñoBtnsAbajo" id="ejerAbajo" onclick="abrirEjercicios()">
+             <img src="../img/icons/gorro-de-graduacion.png" alt="" class="" style="opacity: 0.6;  width: 32px;
+             height: 32px;">
+             <div>Ejercicios</div>
+
+          </div>
+          <div class="diseñoBtnsAbajo" id="configAbajo" onclick="abrirConfig()">
+             <img src="../img/icons/ajustes.png" alt=""  class="" style="opacity: 0.6;">
+             <div>Config</div>
+
+          </div>
+          <div class="diseñoBtnsAbajo" id="infoAbajo" onclick="abrirAbout()">
+             <img src="../img/icons/informacion.png" alt=""  class="" style="opacity: 0.7;">
+             <div>About</div>
+          </div>
+     </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+      <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="../js/firebase.js"></script>
+   
+   <!-- <script src="../js/script.js"></script>-->
+    <script src="../js/inicio.js"></script>
+
+
+</body>
+</html>
+
