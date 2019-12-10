@@ -1,19 +1,38 @@
+
+num1 = document.querySelector('#Num1') 
+num2 = document.querySelector('#Num2')
+num3 = document.querySelector('#Num3')
+MultDiv = document.querySelector('.SumRest')
+numDecimales = 1;
+var objeto = '';
+var db = firebase.firestore();
+var cifra1 = '';
+var cifra2 ='';
+
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
+        db.collection("MatheApp").get().then(function(querySnapshot){
+            querySnapshot.forEach(function(doc){
+             objeto = doc.id;
+             
+             console.log(objeto)
+        
+
+            });
+        });
         console.log('Esta logeado')
         iniciarNumeros()
         MultoDivi()
+
     } else {
         console.log('no esta logeado')
         window.location.href = "../index.html"
     }
   });
-  num1 = document.querySelector('#Num1') 
-  num2 = document.querySelector('#Num2')
-  num3 = document.querySelector('#Num3')
-  MultDiv = document.querySelector('.SumRest')
-  numDecimales = 1;
+
  
+
 
 function numeroAleatorio(rango) {
     NumAl = Math.floor(Math.random() * (rango - 0) + 0);
@@ -22,7 +41,7 @@ return NumAl;
 
 function iniciarNumeros(){
 
-    num1.innerHTML = numeroAleatorio(10);
+    num1.innerHTML = numeroAleatorio(100);
     num2.innerHTML = numeroAleatorio(10);
     
 
@@ -42,6 +61,7 @@ function iniciarNumeros(){
  }
 
  function ejercicio() {
+
      DivMul = MultDiv.innerHTML
      numero1 = num1.innerHTML
      numero2 = num2.innerHTML 
@@ -78,3 +98,6 @@ function respuestaCorrecta() {
     console.log('es igual')
     window.close();
 }
+
+
+
