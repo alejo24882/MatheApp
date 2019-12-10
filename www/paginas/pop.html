@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,41 @@
     <link rel="stylesheet" href="../css/pop.css">
     <title>PopUp</title>
 </head>
+
 <body>
     <div class="contenedor">
         <div class="fondo">
-        
+
         </div>
         <div class="triangulo" id="triangulo"></div>
         <div class="preview" id="preview">
             <div class="contenedorNumeros">
-                 <div class="Num1"  id="Num1"></div>
-                 <div class="Num2"  id="Num2"></div>
-                 <div class="Num3"  id="Num3"></div>
-                 <div class="SumRest">* o /</div>
-                 <div class="igual"> = </div>
-                 <button class="enviar"><img src="../img/icons/btnEviar.png" class="imgBtn"><div class="text">Send</div></button>
-             </div>
-       </div>       
-</div>
+
+                <div class="Num1" id="Num1"></div>
+                <div class="Num2" id="Num2"></div>
+                <input type="number" name="" class="Num3" id="Num3" style="text-align: center;">
+                <div class="SumRest"></div>
+                <div class="igual"> = </div>
+                <button class="enviar" onclick="ejercicio()"><img src="../img/icons/btnEviar.png" class="imgBtn">
+                    <div class="text">Send</div>
+                </button>
+                <div class="avisoNumDecimales"></div>
+            </div>
+        </div>
+    </div>
 
 
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="../js/firebase.js"></script>
+
+    <script src="../js/popup.js"></script>
 </body>
+
 </html>

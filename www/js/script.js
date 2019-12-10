@@ -2,7 +2,7 @@ var consolaAzul = document.getElementById('preview')
 var contedorEmailPass = document.getElementById('contedorEmailPass')
 var btnregistro = document.getElementById('btnRegistrar')
 var btnLogin = document.getElementById('btnLogin')
-
+var db = firebase.firestore();
 
 
 document.getElementById('signIn').addEventListener('click', function(){
@@ -45,8 +45,8 @@ function handleSignUp() {
         // [START createwithemail]
         firebase.auth().createUserWithEmailAndPassword(email, password).then(
                 function () {
-                        
-                        alert('Usuario Creado, ya puedes ingresar!')
+                  crearUsuarioyParametros(email) 
+                       
                        
                 }).catch(function(error) {
           // Handle Errors here.
@@ -111,4 +111,27 @@ function bienvenido() {
         window.location.href = "./paginas/inicio.html"
 }
  
+function crearUsuarioyParametros(usuario) {
+  alert('Usuario Creado, ya puedes ingresar!')
+  //creo objetos
+  envio(usuario)
+}
+
+
+
+function envio(usuario) {
+    
+
+    var data = {
+        nombre: '',
+        apellido: '',
+        configuracion : [{
+                decimales: 0,
+                cifrasnum1: 1,
+                cifrasnum2: 1
+              }]
+          }
+          db.collection("MatheApp").doc(usuario).set(data)
+    }
+    
 
