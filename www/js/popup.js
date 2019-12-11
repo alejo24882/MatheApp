@@ -12,17 +12,16 @@ var cifra2 ='';
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        db.collection("MatheApp").get().then(function(querySnapshot){
+        db.collection("MatheApp").where("usuario","==",user.email).get().then(function(querySnapshot){
             querySnapshot.forEach(function(doc){
-             objeto = doc.id;
-             
-             console.log(objeto)
-        
-
+             objeto = doc.data()
+             cifra1 = objeto.configuracion[0].cifrasnum1
+             cifra2 = objeto.configuracion[0].cifrasnum2
+             iniciarNumeros(cifra1, cifra2)
             });
         });
         console.log('Esta logeado')
-        iniciarNumeros()
+        
         MultoDivi()
 
     } else {
@@ -39,10 +38,10 @@ function numeroAleatorio(rango) {
 return NumAl;
 }
 
-function iniciarNumeros(){
+function iniciarNumeros(parCifra1, parCifra2){
 
-    num1.innerHTML = numeroAleatorio(100);
-    num2.innerHTML = numeroAleatorio(10);
+    num1.innerHTML = numeroAleatorio(parCifra1);
+    num2.innerHTML = numeroAleatorio(parCifra2);
     
 
 }
@@ -96,7 +95,7 @@ function iniciarNumeros(){
 
 function respuestaCorrecta() {
     console.log('es igual')
-    window.close();
+    window,location.href = './inicio.html'
 }
 
 

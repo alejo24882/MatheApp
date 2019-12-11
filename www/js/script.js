@@ -123,6 +123,7 @@ function envio(usuario) {
     
 
     var data = {
+        usuario: usuario,
         nombre: '',
         apellido: '',
         configuracion : [{
