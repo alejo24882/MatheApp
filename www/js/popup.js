@@ -4,10 +4,9 @@ num2 = document.querySelector('#Num2')
 num3 = document.querySelector('#Num3')
 MultDiv = document.querySelector('.SumRest')
 numDecimales = '';
-var objeto = '';
+
 var db = firebase.firestore();
-var cifra1 = '';
-var cifra2 = '';
+
 
 
 firebase.auth().onAuthStateChanged(function (user) {
@@ -17,8 +16,11 @@ firebase.auth().onAuthStateChanged(function (user) {
                 objeto = doc.data()
                 cifra1 = objeto.configuracion[0].cifrasnum1
                 cifra2 = objeto.configuracion[0].cifrasnum2
+                cifra3 = objeto.configuracion[0].cifrasnum3
+                cifra4 = objeto.configuracion[0].cifrasnum4
+
                 numDecimales = objeto.configuracion[0].decimales
-                    iniciarNumeros(cifra1, cifra2)
+                    iniciarNumeros(cifra1, cifra2, cifra3, cifra4)
                     MultoDivi()
             });
         });
@@ -35,20 +37,20 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 
 
-function numeroAleatorio(rango) {
-    NumAl = Math.floor(Math.random() * (rango - 0) + 0);
+function numeroAleatorio(rango2, rango1) {
+    NumAl = Math.floor(Math.random() * (rango1 - rango2) + rango2);
     return NumAl;
 }
 
-function iniciarNumeros(parCifra1, parCifra2) {
+function iniciarNumeros(parCifra1, parCifra2, parCifra3, parCifra4) {
 
-    num1.innerHTML = numeroAleatorio(parCifra1);
-    num2.innerHTML = numeroAleatorio(parCifra2);
+    num1.innerHTML = numeroAleatorio(parCifra1, parCifra2);
+    num2.innerHTML = numeroAleatorio(parCifra3, parCifra4);
 
 
 }
 function MultoDivi() {
-    opc = numeroAleatorio(2)
+    opc = numeroAleatorio(2,0)
 
     if (opc == 0) {
         MultDiv.innerHTML = '/'

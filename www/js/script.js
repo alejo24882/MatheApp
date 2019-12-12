@@ -128,8 +128,11 @@ function envio(usuario) {
         apellido: '',
         configuracion : [{
                 decimales: 0,
-                cifrasnum1: 1,
-                cifrasnum2: 1
+                cifrasnum1: 0,
+                cifrasnum2: 10,
+                cifrasnum3: 0,
+                cifrasnum4: 10
+
               }]
           }
           db.collection("MatheApp").doc(usuario).set(data)
