@@ -44,34 +44,73 @@
                         <div>About</div>
                     </div>
                 </div>
-                
+
                 <div class='contBtnLogOut'>
                     <input type="button" value="Logout" id="btnLoginout" class="btnLoginout" onclick="LogOut()">
                     <div class="usulog"></div>
                 </div>
-                
+
             </div>
             <!-- Fin pagina inicial -->
+
             <!-- Inicio Ejercicios -->
             <div class="paginaEjercicios">
                 <div class="ContEjer">
-
-
-
                     <div class="ContBtnEjer">
                         <button class='btnEjercicios' onclick="envioaPopup()">Iniciar Ejercicios</button>
                     </div>
                 </div>
+            </div>
+            <!-- fin paginas de ejercicios -->
+
+            <!-- inicio pagina de configuracion -->
+            <div class="paginaConfiguracion">
+                <div class="aviso">
+                    <div class="avisotexto">Indica la cantidad de decimales que quieres para la respuesta en Divisiones
+                    </div>
+                </div>
+                <div class="divInputDecimales">
+
+                    <input type="radio" name="gender" value="0" id="check1"> 0<br>
+                    <input type="radio" name="gender" value="1" id="check2"> 1<br>
+                    <input type="radio" name="gender" value="2" id="check3"> 2
+
+                </div>
+                <div class="aviso">
+                    <div class="avisotexto">Configura el rango de numeros que deseas para el primer indicador</div>
+                </div>
+                <div class="ContebtnEnviarConfig">
+
+                    de: <br>
+                    <input type="number" name="digito1" min="0" max="100" value="0"
+                        style="margin-left:10px; margin-right: 10px;" >
+                    hasta: <br>
+                    <input type="number" name="digito2" min="0" max="100" value="0" style="margin-left:10px;" id="inpConfig2">
+                </div>
+
+                <div class="aviso">
+                    <div class="avisotexto">Configura el rango de numeros que deseas para el segundo indicador</div>
+                </div>
+                <div class="ContebtnEnviarConfig"> de: <br>
+                    <input type="number" name="digito1" min="0" max="100" value="0"
+                        style="margin-left:10px; margin-right: 10px;">
+                    hasta: <br>
+                    <input type="number" name="digito2" min="0" max="100" value="0" style="margin-left:10px;" id="inpConfig1"></div>
+
+                <div class="ContebtnEnviarConfig">
+                    <button>Guardar</button>
+                </div>
 
             </div>
+            <!-- fin pagina de configuracion -->
+
+
 
 
 
 
         </div>
-
         <div class="navAbajo">
-
             <div class="diseñoBtnsAbajo" id="menuAbajo" onclick="abrirPaginaInicial()">
                 <img src="../img/icons/casa.png" alt="" class="" style="opacity: 0.6;">
                 <div>Home</div>
@@ -80,12 +119,10 @@
                 <img src="../img/icons/gorro-de-graduacion.png" alt="" class="" style="opacity: 0.6;  width: 32px;
              height: 32px;">
                 <div>Ejercicios</div>
-
             </div>
             <div class="diseñoBtnsAbajo" id="configAbajo" onclick="abrirConfig()">
                 <img src="../img/icons/ajustes.png" alt="" class="" style="opacity: 0.6;">
                 <div>Config</div>
-
             </div>
             <div class="diseñoBtnsAbajo" id="infoAbajo" onclick="abrirAbout()">
                 <img src="../img/icons/informacion.png" alt="" class="" style="opacity: 0.7;">

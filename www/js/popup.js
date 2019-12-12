@@ -52,7 +52,7 @@ function MultoDivi() {
 
     if (opc == 0) {
         MultDiv.innerHTML = '/'
-        document.querySelector('.avisoNumDecimales').innerHTML = '*Respuesta con ' + numDecimales + ' decimanes';
+        document.querySelector('.avisoNumDecimales').innerHTML = '*Respuesta con ' + numDecimales + ' decimaes';
 
     } else {
         MultDiv.innerHTML = 'X'

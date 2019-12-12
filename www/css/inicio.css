@@ -139,3 +139,60 @@ text-align: center;
 color: white;
 margin-top: 10px;   
 }
+.paginaConfiguracion{
+    width: 90vw;
+    display: none;
+    flex-direction: column;
+}
+.paginaConfiguracion div{
+    width: 100vw;
+    height: 8vh;
+  
+    }
+.aviso{
+    display: flex;
+    background: rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+.avisotexto{
+    width: 30vw;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.divInputDecimales{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.divInputDecimales input{
+
+
+    margin-left: 8vw;
+}
+.ContebtnEnviarConfig{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ContebtnEnviarConfig button{
+    background: #4DB0E8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0px 10px;
+width: 200px;
+height: 30px;
+border-radius:40px;
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+color: white;
+margin-top: 10px;
+}
